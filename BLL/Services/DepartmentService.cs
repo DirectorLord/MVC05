@@ -1,14 +1,15 @@
 ﻿using BLL.DataTransferObject;
+using DAL.Entities;
 using DAL.Reporsitories;
 
 namespace BLL.Services;
 
-public class DepartmentService : IDepartmentService
+public class DepartmentService(IRepository<Department> repository) : IDepartmentService
 {
-    private IdepartmentRepository _departmentRepository;
+    private IDepartmentRepository _departmentRepository;
     public IDepartmentService departmentService;
 
-    public DepartmentService(IdepartmentRepository idepartmentRepository)
+    public DepartmentService(IDepartmentRepository idepartmentRepository)
     {
         _departmentRepository = idepartmentRepository;
     }

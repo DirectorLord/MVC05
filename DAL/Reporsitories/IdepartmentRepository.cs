@@ -2,11 +2,6 @@
 
 namespace DAL.Reporsitories;
 
-public interface IdepartmentRepository
+public interface IDepartmentRepository : IRepository<Department>
 {
-    IEnumerable<Department> GetAll(bool trackChanges = false);
-    Department GetById(int id);
-    int Add(Department department);
-    int Update(Department department);
-    int Delete(Department department);
 }

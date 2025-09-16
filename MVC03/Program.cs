@@ -1,5 +1,5 @@
 using BLL.Services;
-using DAL.Context.Configurations;
+using DAL;
 using DAL.Reporsitories;
 using Microsoft.EntityFrameworkCore;
 

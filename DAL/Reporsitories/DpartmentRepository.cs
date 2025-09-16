@@ -1,5 +1,4 @@
-﻿using DAL.Context.Configurations;
-using DAL.Entities;
+﻿using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Reporsitories;

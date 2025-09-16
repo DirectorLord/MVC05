@@ -1,5 +1,5 @@
 ﻿using Azure.Core;
-using BLL.DataTransferObject;
+using BLL.DataTransferObject.Department;
 using BLL.Services;
 using DAL.Entities;
 using Microsoft.AspNetCore.Mvc;

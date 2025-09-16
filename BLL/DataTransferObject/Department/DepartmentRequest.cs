@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.DataTransferObject;
+namespace BLL.DataTransferObject.Department;
 
 public class DepartmentRequest
 {
@@ -15,4 +15,5 @@ public class DepartmentRequest
     [Required]
     public string Code { get; set; } = null!;
     public DateTime CreatedOn {  get; set; }
+    public string? ToEntity { get; set; }
 }

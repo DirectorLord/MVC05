@@ -10,7 +10,7 @@ namespace DAL.Entities;
 public class BaseEntity
 {
     public int Id { get; set; } // => PK
-    public bool isDelted { get; set; } // soft deletion
+    public bool isDeleted { get; set; } // soft deletion
     public int createdBy { get; set; } // userID
     public DateTime CreatedOn { get; set; } //
     public int LastModifiedBy { get; set; } //user iD

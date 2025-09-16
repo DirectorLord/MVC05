@@ -1,8 +1,8 @@
 using BLL.Services;
 using DAL;
-using DAL.Entities;
 using DAL.Reporsitories;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 
 namespace MVC03;
 public class Program
@@ -24,7 +24,7 @@ public class Program
             var _ = builder.Configuration["ConnectionsString:DefaultConnection"];
             options.UseSqlServer();
         });
-
+        builder.Services.AddAutoMapper(typeof(AssemblyReference).Assembly);
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

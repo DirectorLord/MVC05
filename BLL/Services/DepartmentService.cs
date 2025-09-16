@@ -1,4 +1,4 @@
-﻿using BLL.DataTransferObject;
+﻿using BLL.DataTransferObject.Department;
 using DAL.Entities;
 using DAL.Reporsitories;
 
@@ -6,17 +6,15 @@ namespace BLL.Services;
 
 public class DepartmentService(IRepository<Department> repository) : IDepartmentService
 {
-    private IDepartmentRepository _departmentRepository;
-    public IDepartmentService departmentService;
-
-    public DepartmentService(IDepartmentRepository idepartmentRepository)
+    public int Create(DepartmentRequest request)
     {
-        _departmentRepository = idepartmentRepository;
+        return repository.Add(request.ToEntity());
     }
 
     public DepartmentDetailResponse? GetById(int id)
     {
-        return departmentService.GetById(id);
+        
+        
     }
 
     public IEnumerable<DepartmentDetailResponse> GetAll()
@@ -29,9 +27,11 @@ public class DepartmentService(IRepository<Department> repository) : IDepartment
         return departmentService.Update(request);
     }
 
-    public int Delete(int id)
+    public bool Delete(int id)
     {
-        return departmentService.Delete(id);
+        var department = repository.GetById(id);
+        if (department == null) return false;
+        var result = repository.Delete(department);
     }
 
     public int Add(DepartmentRequest request)

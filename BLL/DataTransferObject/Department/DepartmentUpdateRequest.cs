@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.DataTransferObject;
+namespace BLL.DataTransferObject.Department;
 
-public class DepartmentResponse
+public class DepartmentUpdateRequest
 {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public string? Description { get; set; }
     public string Code { get; set; } = string.Empty;
-    public DateOnly CreatedAt { get; set; }
+    public DateOnly CreatedOn { get; set; }
 }
